@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 10%);
+    background-size: 50px 50px;
+    transform: rotate(45deg);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.calculator {
+    width: 350px;
+    background: rgba(34, 34, 34, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.display {
+    height: 70px;
+    background: #000;
+    color: #0f0;
+    font-size: 2em;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    box-shadow: inset 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: rgba(68, 68, 68, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+    background: rgba(102, 102, 102, 0.9);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.operator {
+    background: #ff9500;
+    box-shadow: 0 5px 15px rgba(255, 149, 0, 0.3);
+}
+
+.operator:hover {
+    background: #e08900;
+}
+
+.special {
+    background: #00aaff;
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.3);
+}
+
+.special:hover {
+    background: #0088cc;
+}
