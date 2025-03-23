@@ -7,35 +7,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display" id="display">0</div>
-        <div class="buttons">
-            <button class="special" onclick="clearDisplay()">C</button>
-            <button class="operator" onclick="appendToDisplay('/')">/</button>
-            <button class="operator" onclick="appendToDisplay('*')">*</button>
-            <button class="special" onclick="deleteLast()">DEL</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button class="operator" onclick="appendToDisplay('-')">-</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button class="operator" onclick="appendToDisplay('+')">+</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button class="operator" onclick="calculateResult()">=</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button class="special" onclick="calculateSqrt()">√</button>
-            <button class="special" onclick="calculatePower()">x^y</button>
-            <button class="special" onclick="calculateTrig('sin')">sin</button>
-            <button class="special" onclick="calculateTrig('cos')">cos</button>
-            <button class="special" onclick="calculateTrig('tan')">tan</button>
-            <button class="special" onclick="calculateLog()">log</button>
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <div id="content">
+        <div class="calculator" >
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button class="special" onclick="clearDisplay()">C</button>
+                <button class="operator" onclick="appendToDisplay('/')">/</button>
+                <button class="operator" onclick="appendToDisplay('*')">*</button>
+                <button class="special" onclick="deleteLast()">DEL</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button class="operator" onclick="appendToDisplay('-')">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button class="operator" onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button class="operator" onclick="calculateResult()">=</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button class="special" onclick="calculateSqrt()">√</button>
+                <button class="special" onclick="calculatePower()">x^y</button>
+                <button class="special" onclick="calculateTrig('sin')">sin</button>
+                <button class="special" onclick="calculateTrig('cos')">cos</button>
+                <button class="special" onclick="calculateTrig('tan')">tan</button>
+                <button class="special" onclick="calculateLog()">log</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="loading.js"></script>
 </body>
 </html>
